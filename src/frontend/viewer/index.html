@@ -1,0 +1,117 @@
+<!--
+    index.html
+    - Webapp structure.
+  
+    César González Segura, 2016
+    <cegonse@posgrado.upv.es>, <cegonse@alumni.uv.es>
+  
+    This application is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+  
+    It is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+  
+    You should have received a copy of the GNU General Public License
+    along with these files.  If not, see <http://www.gnu.org/licenses/>.
+-->
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>MultiAgentSystem - Simulation Viewer</title>
+        <link rel="stylesheet" type="text/css" href="./css/style.css">
+    </head>
+    
+    <body>
+        <div id="main">
+            <div id="tools">
+                <table>
+                    <tr>
+                        <th>&nbsp;</th>
+                        <th>
+                            Simulation step:
+                        </th>
+                        <th>&nbsp;</th>
+                    </tr>
+                    <tr>
+                        <td>
+                            <button onclick="prevStep()">Step Back</button>
+                        </td>
+                        <td>
+                            <button onclick="togglePlay()">Play</button>
+                        </td>
+                        <td>
+                            <button onclick="nextStep()">Step Fwd</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Animation speed:
+                        </td>
+                        <td>
+                            <input id="animSpeed"/>
+                        </td>
+                        <td>
+                                Steps / sec
+                        </td>
+                    </tr>
+                    <tr>
+                        <th><hr /></th>
+                        <th><hr /></th>
+                        <th><hr /></th>
+                    </tr>
+                    <tr>
+                        <th>&nbsp;</th>
+                        <th>
+                            Simulation data:
+                        </th>
+                        <th>&nbsp;</th>
+                    </tr>
+                    <tr>
+                        <td>
+                            Agent count:
+                        </td>
+                        <td id="agentCount">
+                            0
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Total steps:
+                        </td>
+                        <td id="totalSteps">
+                            0
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Current step:
+                        </td>
+                        <td id="currentStep">
+                            0
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <button onclick="loadSimulation()">Start Simulation</button>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div id="renderer">
+                If you are reading this text, your browser isn't compatible
+                with WebGL. Update to a newer version or access from a diferent
+                platform.
+            </div>
+        </div>
+        
+        <script src="./js/jquery.min.js"></script>
+        <script src="./js/three.min.js"></script>
+        <script src="./js/OrbitControls.js"></script>
+        <script src="./js/main.js"></script>
+    </body>
+</html>

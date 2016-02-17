@@ -1,0 +1,47 @@
+{
+    "mode": "vec",
+    
+    "env":
+    {
+        "agents": [
+        {
+            "type": "exampleAgent",
+            "p0": 
+            {
+                "x": 3,
+                "y": 0,
+                "z": 3
+            }
+        },
+        
+        {
+            "type": "exampleAgent",
+            "p0": 
+            {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            }
+        }]
+    },
+    
+    "p0":
+    {
+        "x": -20,
+        "y": -20,
+        "z": -20
+    },
+    
+    "pf":
+    {
+        "x": 20,
+        "y": 20,
+        "z": 20
+    },
+    
+    "saveSteps": true,
+    "numSteps": 25,
+    
+    "debug": true,
+    "cardinality": 1
+}
